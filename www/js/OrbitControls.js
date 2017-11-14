@@ -1,29 +1,3 @@
-/** https://gist.github.com/mrflix/8351020
- * @author qiao / https://github.com/qiao
- * @author mrdoob / http://mrdoob.com
- * @author alteredq / http://alteredqualia.com/
- * @author WestLangley / http://github.com/WestLangley
- * @author erich666 / http://erichaines.com
- * @author mrflix / http://felixniklas.de
- * 
- * released under MIT License (MIT)
- */
-/*global THREE, console */
-
-// This set of controls performs orbiting, dollying (zooming), and panning. It maintains
-// the "up" direction as +Y, unlike the TrackballControls. Touch on tablet and phones is
-// supported.
-//
-//    Orbit - left mouse / touch: one finger move
-//    Zoom - middle mouse, or mousewheel / touch: two finger spread or squish
-//    Pan - right mouse, or arrow keys / touch: three finter swipe
-//
-// This is a drop-in replacement for (most) TrackballControls used in examples.
-// That is, include this js file and wherever you see:
-//    	controls = new THREE.TrackballControls( camera );
-//      controls.target.z = 150;
-// Simple substitute "OrbitControls" and the control should work as-is.
-
 THREE.OrbitControls = function ( object, domElement, localElement ) {
     
         this.object = object;
@@ -71,8 +45,7 @@ THREE.OrbitControls = function ( object, domElement, localElement ) {
         // The four arrow keys
         this.keys = { LEFT: 37, UP: 38, RIGHT: 39, BOTTOM: 40 };
     
-        ////////////
-        // internals
+        
     
         var scope = this;
     
